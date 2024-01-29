@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    //colores primarios
+    <color name="purple1">#515FAF</color>
+    <color name="purple2">#878ECD</color>
+    <color name="white_lila">#DDE7F2</color>
+
+    //colores secundarios
+    <color name="lime1">#B3CDCF</color>
+    <color name="lime2">#9FC1BE</color>
+    <color name="cian">#8EE3E0</color>
+</resources>
