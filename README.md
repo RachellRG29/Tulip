@@ -1,2 +1,3 @@
-![image](https://github.com/RachellRL29/Tulip/assets/157405004/471f3ee4-88d2-46b2-8dff-1605873b25a4)
+![image](https://github.com/RachellRL29/Tulip/assets/157405004/ba80f2f2-d0e1-442a-83c8-530bef39c260)
+
 
