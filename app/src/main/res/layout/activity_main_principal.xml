@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/purple2"
     tools:context=".MainActivityPrincipal">
-
 
 
     <androidx.appcompat.widget.Toolbar
@@ -30,7 +28,30 @@
         android:layout_marginEnd="345dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/tulip_original"
-        app:tint="@color/lime1" />
+        app:tint="@color/lime1"
+        />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpaper_principal"
+        android:layout_width="match_parent"
+        android:layout_height="602dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/purple2" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavigation_principal"
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:layout_below="@+id/viewpaper_principal"
+        android:background="@color/purple1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp" />
 
 
 </RelativeLayout>
