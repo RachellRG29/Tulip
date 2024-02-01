@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import android.os.Build; //barra estado
+import android.view.Window; //barra estado
+import android.view.WindowManager; //barra estado
 
 public class MainActivity extends AppCompatActivity {
     Handler handler;
@@ -24,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //cambiar color barra estado
+        cambiarColorBarraEstado(getResources().getColor(R.color.purple1));
+
 
         //splash para pasar al nuevo MainActivityPage1
         handler = new Handler();
@@ -35,7 +41,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },2060);
+        },2020);
 
     }
+
+    private void cambiarColorBarraEstado(int color) {
+        // Verificar si la versión del SDK es Lollipop o superior
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(color);
+        }
+    } //fin cambiar colorbarraestado
+
 }
