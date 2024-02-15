@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/background_sign_up"
         android:layout_width="wrap_content"
-        android:layout_height="528dp"
+        android:layout_height="537dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -19,7 +19,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="9dp"
-        android:layout_marginBottom="183dp"
+        android:layout_marginBottom="174dp"
         android:background="@drawable/bg_circle3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,41 +31,27 @@
 
         <ImageView
             android:id="@+id/logo_tulipv1"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/tulipv1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.066" />
-
-        <TextView
-            android:id="@+id/lbl_sign_up"
-            android:layout_width="131dp"
-            android:layout_height="38dp"
-            android:fontFamily="@font/neueremansans_regular"
-            android:text="@string/registrar"
-            android:textAlignment="center"
-            android:textColor="@color/purple1"
-            android:textSize="26sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.500"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo_tulipv1"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.03" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/group_login"
-            android:layout_width="358dp"
-            android:layout_height="330dp"
+            android:layout_width="345dp"
+            android:layout_height="399dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.529"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl_sign_up"
-            app:layout_constraintVertical_bias="0.216">
+            app:layout_constraintVertical_bias="0.08">
+
 
             <TextView
                 android:id="@+id/lbl_usuario"
@@ -77,24 +63,41 @@
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.104"
+                app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.108" />
+                app:layout_constraintVertical_bias="0.042" />
 
 
             <EditText
-                android:id="@+id/txt_usuario"
-                android:layout_width="302dp"
-                android:layout_height="43dp"
+                android:id="@+id/txt_usuario_sign"
+                android:layout_width="290dp"
+                android:layout_height="42dp"
                 android:fontFamily="@font/neueremansans_regular"
+                android:inputType="text"
                 android:textColor="@color/purple2"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.525"
+                app:layout_constraintHorizontal_bias="0.527"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lbl_usuario"
                 app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/lbl_genero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/neueremansans_regular"
+                android:text="@string/genero"
+                android:textColor="@color/purple1"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_usuario_sign"
+                app:layout_constraintVertical_bias="0.086" />
 
             <TextView
                 android:id="@+id/lbl_conf_contra"
@@ -106,20 +109,22 @@
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.145"
+                app:layout_constraintHorizontal_bias="0.188"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_contraseña"
-                app:layout_constraintVertical_bias="0.200" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_contrasena_sign"
+                app:layout_constraintVertical_bias="0.261" />
 
             <EditText
-                android:id="@+id/txt_conf_contra"
-                android:layout_width="302dp"
-                android:layout_height="38dp"
+                android:id="@+id/txt_conf_contra_sign"
+                android:layout_width="290dp"
+                android:layout_height="42dp"
                 android:fontFamily="@font/neueremansans_regular"
+                android:inputType="textPassword"
                 android:textColor="@color/purple2"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.525"
+                app:layout_constraintHorizontal_bias="0.604"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lbl_conf_contra"
                 app:layout_constraintVertical_bias="0.0" />
@@ -134,26 +139,96 @@
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.104"
+                app:layout_constraintHorizontal_bias="0.12"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_usuario"
-                app:layout_constraintVertical_bias="0.108" />
+                app:layout_constraintTop_toBottomOf="@+id/rd_groupgenero"
+                app:layout_constraintVertical_bias="0.128" />
+
 
             <EditText
-                android:id="@+id/txt_contraseña"
-                android:layout_width="303dp"
+                android:id="@+id/txt_contrasena_sign"
+                android:layout_width="290dp"
                 android:layout_height="42dp"
                 android:fontFamily="@font/neueremansans_regular"
+                android:inputType="textPassword"
                 android:textColor="@color/purple2"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.525"
+                app:layout_constraintHorizontal_bias="0.563"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lbl_contraseña"
                 app:layout_constraintVertical_bias="0.0" />
 
+            <RadioGroup
+                android:id="@+id/rd_groupgenero"
+                android:layout_width="282dp"
+                android:layout_height="84dp"
+                android:gravity="center_vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.46"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_genero"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <RadioButton
+                    android:id="@+id/btn_masculino"
+                    android:layout_width="263dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:buttonTint="@color/purple1"
+                    android:checked="true"
+                    android:fontFamily="@font/neueremansans_regular"
+                    android:text="@string/masc"
+                    android:textColor="@color/purple2"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.131"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <RadioButton
+                    android:id="@+id/btn_femenino"
+                    android:layout_width="262dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_vertical"
+                    android:buttonTint="@color/purple1"
+                    android:fontFamily="@font/neueremansans_regular"
+                    android:text="@string/fem"
+                    android:textColor="@color/purple2"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/btn_masculino"
+                    app:layout_constraintTop_toTopOf="@+id/btn_masculino"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+            </RadioGroup>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/lbl_sign_up"
+            android:layout_width="130dp"
+            android:layout_height="38dp"
+            android:fontFamily="@font/neueremansans_regular"
+            android:text="@string/registrar"
+            android:textAlignment="center"
+            android:textColor="@color/purple1"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_tulipv1"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

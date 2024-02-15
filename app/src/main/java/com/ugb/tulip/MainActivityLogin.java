@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import android.os.Build;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class MainActivityLogin extends AppCompatActivity {
 
@@ -20,16 +23,35 @@ public class MainActivityLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_login);
 
+        //valores para usuario y contraseña
+        EditText txtUsuarioL= (EditText)findViewById(R.id.txt_usuario_login);
+        EditText txtContrasenaL= (EditText)findViewById(R.id.txt_contrasena_login);
+
+
         //cambiar color barra de estado
         cambiarColorBarraEstado(getResources().getColor(R.color.purple1));
-
-        //boton ingresar
-        Button btnPrincipal = (Button) findViewById(R.id.btn_ingresar);
-        btnPrincipal.setOnClickListener(v -> openPrincipal());
 
         //txt lbl_signup_aActivitySignup a Registrar en caso de no tener cuenta
         TextView lblRegistrar = (TextView) findViewById(R.id.lbl_login_aActivitySignup);
         lblRegistrar.setOnClickListener(v -> openRegistrarlbl());
+
+        //boton ingresar
+        Button btnPrincipal = (Button) findViewById(R.id.btn_ingresar);
+        btnPrincipal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(txtUsuarioL.getText().toString().isEmpty() && txtContrasenaL.getText().toString().isEmpty()){
+                    txtUsuarioL.setError("Campo requerido");
+                    txtContrasenaL.setError("Campo requerido");
+                    return;
+
+                } else {
+                    btnPrincipal.setOnClickListener(v -> openPrincipal());
+                }
+            }
+        });
+        //abrir principal
+       // btnPrincipal.setOnClickListener(v -> openPrincipal());
 
 
     }
